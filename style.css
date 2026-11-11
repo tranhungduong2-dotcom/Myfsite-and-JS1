@@ -1,4 +1,4 @@
-/* --- Global Styles & Design Tokens --- */
+
 :root {
     --primary-color: #e60023;
     --dark-bg: #0f111a;
@@ -53,8 +53,6 @@ h2 {
     gap: 2rem;
 }
 
-/* --- Main Display Element (#image) --- */
-/* Căn chỉnh text nằm ở mép dưới cùng (align-items: flex-end) để không che tác phẩm art ở giữa */
 #image {
     width: 100%;
     height: 520px;
@@ -65,14 +63,13 @@ h2 {
     background-repeat: no-repeat;
     border: 2px solid var(--border-color);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-    
-    /* Cấu trúc Flexbox đẩy dòng chữ xuống đáy khung */
+
     display: flex;
     align-items: flex-end;
     justify-content: center;
     padding: 1.5rem;
     
-    /* Style cho chữ chú thích */
+
     font-size: 1.05rem;
     font-weight: 500;
     color: var(--text-main);
@@ -84,7 +81,7 @@ h2 {
     backdrop-filter: blur(6px);
 }
 
-/* --- Gallery Grid & Thumbnails --- */
+
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
