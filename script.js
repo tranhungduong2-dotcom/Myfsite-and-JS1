@@ -13,7 +13,7 @@ function upDate(previewPic) {
     imageDiv.style.backgroundImage = "url('" + previewPic.src + "')";
 }
 
- */
+ 
 function unDo() {
    
     console.log("Event triggered: unDo()");
