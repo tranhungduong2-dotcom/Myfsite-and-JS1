@@ -1,42 +1,31 @@
 
 function upDate(previewPic) {
-    // 1. Kiểm tra sự kiện đã kích hoạt
+ 
     console.log("Event triggered: upDate()");
 
-    // 2. In thông tin chi tiết của tham số previewPic (alt & src) ra console
     console.log("Preview Picture Source (src):", previewPic.src);
     console.log("Preview Picture Alt Text (alt):", previewPic.alt);
 
-    // 3. Lấy phần tử có id là 'image'
     let imageDiv = document.getElementById('image');
 
-    // 4. Thay đổi nội dung văn bản thành alt text của ảnh
     imageDiv.innerHTML = previewPic.alt;
 
-    // 5. Thay đổi ảnh nền (background-image) thành đường dẫn src của ảnh
     imageDiv.style.backgroundImage = "url('" + previewPic.src + "')";
 }
 
-/**
- * Hàm unDo: Kích hoạt khi rê chuột ra ngoài hoặc mất focus bàn phím
  */
 function unDo() {
-    // 1. Kiểm tra sự kiện đã kích hoạt
+   
     console.log("Event triggered: unDo()");
 
-    // 2. Lấy phần tử có id là 'image'
     let imageDiv = document.getElementById('image');
 
-    // 3. Khôi phục url ảnh nền về giá trị ban đầu url('')
     imageDiv.style.backgroundImage = "url('')";
 
-    // 4. Khôi phục dòng chữ về nội dung mặc định ban đầu
     imageDiv.innerHTML = "Hover over an image below to display here.";
 }
 
-/**
- * Hàm bổ sung tabindex="0" để hỗ trợ truy cập bằng bàn phím (Keyboard Accessibility)
- */
+
 function addTabFocusAttributes() {
     console.log("Page loaded: Running addTabFocusAttributes() via onload event.");
     
@@ -47,5 +36,4 @@ function addTabFocusAttributes() {
     }
 }
 
-// Gán hàm addTabFocusAttributes vào sự kiện window.onload
 window.onload = addTabFocusAttributes;
