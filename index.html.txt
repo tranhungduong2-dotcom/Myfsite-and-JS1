@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Photo Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header-section">
+        <h1>Red Velvet Visual Concept Gallery</h1>
+        <h2>Hover over an image below or use TAB key to display full size</h2>
+    </header>
+
+    <main class="main-container">
+        <!-- Element chính có id="image" chứa text mặc định theo đúng yêu cầu đề bài -->
+        <section aria-label="Main Photo Display">
+            <div id="image" role="region" aria-live="polite">
+                Hover over an image below to display here.
+            </div>
+        </section>
+
+        <!-- Danh sách 6 hình ảnh kích hoạt sự kiện Mouse & Keyboard -->
+        <section aria-label="Image Thumbnails" class="gallery-grid">
+            <figure class="gallery-card">
+                <img class="preview" 
+                     src="cheetah.jpg" 
+                     alt="Red Velvet Irene & Seulgi - Cheetah Japan Mini Album Cover" 
+                     onmouseover="upDate(this)" 
+                     onmouseleave="unDo()" 
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+                <figcaption class="caption">Cheetah (2020)</figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+                <img class="preview" 
+                     src="revefes2019.jpg" 
+                     alt="Red Velvet - The ReVe Festival: Finale Concept Artwork" 
+                     onmouseover="upDate(this)" 
+                     onmouseleave="unDo()" 
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+                <figcaption class="caption">ReVe Festival (2019)</figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+                <img class="preview" 
+                     src="badboyalbcover.jpg" 
+                     alt="Red Velvet - The Perfect Red Velvet Bad Boy Edition Cover" 
+                     onmouseover="upDate(this)" 
+                     onmouseleave="unDo()" 
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+                <figcaption class="caption">Bad Boy (2018)</figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+                <img class="preview" 
+                     src="chillkill.jpg" 
+                     alt="Red Velvet - Chill Kill 3rd Full Album Traditional Artwork Cover" 
+                     onmouseover="upDate(this)" 
+                     onmouseleave="unDo()" 
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+                <figcaption class="caption">Chill Kill (2023)</figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+                <img class="preview" 
+                     src="RBBcoverart.jpg" 
+                     alt="Red Velvet - Really Bad Boy (RBB) Mini Album Cover" 
+                     onmouseover="upDate(this)" 
+                     onmouseleave="unDo()" 
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+                <figcaption class="caption">RBB (2018)</figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+                <img class="preview" 
+                     src="Perfect velvet.jpg" 
+                     alt="Red Velvet - Perfect Velvet 2nd Full Album House Artwork Cover" 
+                     onmouseover="upDate(this)" 
+                     onmouseleave="unDo()" 
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+                <figcaption class="caption">Perfect Velvet (2017)</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer class="footer-section">
+        <p>Interactive Web Gallery &copy; 2026 - Designed for Full Accessibility</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
